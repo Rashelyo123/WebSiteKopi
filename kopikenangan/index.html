@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>KOpi Rashelyo</title>
+
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,300;0,400;0,700;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- my father icont -->
+    <script src="https://unpkg.com/feather-icons"></script>
+
+    <link rel="stylesheet" href="CSS/style.css" />
+  </head>
+  <body>
+    <!-- navbar start -->
+    <nav class="navbar">
+      <a href="#" class="navbar-logo">Rashel<span>Coffe</span>.</a>
+      <div class="navbar-nav">
+        <a href="#">home</a>
+        <a href="#about">tentang kami</a>
+        <a href="#menu">menu</a>
+        <a href="#contact">kontak</a>
+      </div>
+
+      <div class="navbar-extra">
+        <a href="#" id="search"><i data-feather="search"></i></a>
+        <a href="#" id="shopping-cart"><i data-feather="shopping-cart"></i></a>
+        <a href="#" id="menu"><i data-feather="menu"></i></a>
+      </div>
+    </nav>
+
+    <!-- navbar end -->
+
+
+
+    <!-- hero section -->
+
+    <section class="hero" id="home">
+      <main class="content">
+        <h1>Mari Awali Harimu Dengan secangkir <span>Kopi</span></h1>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Similique ipsum dicta molestiae qui! Nisi illo necessitatibus ea cum unde blanditiis, adipisci commodi natus magni quos exercitationem, rerum ab voluptatem numquam.</p>
+        <a href="#" class="cta">Beli Sekarang</a>
+      </main>
+    </section>
+
+    <!-- hero end -->
+
+    <!-- father icont -->
+    <script>
+      feather.replace();
+    </script>
+
+    <!-- my script -->
+
+    <script>//togle class active
+
+      const navbarNav = document.querySelector('.navbar-nav');
+      //ketika humbergr menu di klik
+      document.querySelector('#menu').onclick = () => {
+          navbarNav.classList.toggle('active');
+      };
+
+          //klik di luar side bar untuk menghilangkan navnya
+          const menu = document.querySelector ('#menu');
+          document.addEventListener('click', function(e){
+            if(!menu.contains(e.target)&& !navbarNav.contains(e.target)){
+              navbarNav.classList.remove('active')
+            }
+          })
+      </script>
+  </body>
+</html>
